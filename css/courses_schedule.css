@@ -1,0 +1,333 @@
+@font-face {
+    font-family: 'Sen-Regular';
+    src: url('Sen-Regular.ttf') format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    background-color: #f2fdff;
+    margin: auto;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Sen-Regular';  
+}
+/**********************SECTION ENTIERE**************/
+section{
+    display: flex; 
+}
+/************************************************/
+/***************HEADER**************************/
+header{
+    display: flex;
+    background-color: rgb(0,2,30);
+    border-bottom: 4px solid white;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    transition: top 0.5s;
+    width: 100%;
+}
+header  h2{
+    padding: 10px;
+    color: white;
+    margin-left: 20px;
+}
+header  p img{
+    width: 38px;
+}
+header  p{
+    display: none;
+}
+/*************************************************/
+.section-centrale{
+    margin-top: 50px;
+}
+/**********************BLOC GAUCHE****************/
+.bloc_gauche{
+    height: 100vh;
+    padding-top: 20px;
+    width: 260px;
+    padding-left: 25px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.486);
+    background-color: white;
+}
+.bloc_gauche p img{
+    width: 25px;
+    padding: 0;
+}
+.bloc_gauche .dashboard{
+    padding-top: 7px;
+}
+.bloc_gauche a {
+    width: 250px;
+    padding: 7px;
+    color: black;
+}
+.bloc_gauche a{
+    text-decoration: none;
+}
+.bloc_gauche div:hover{
+    background-color:  #e3f3ff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;  
+}
+
+.bloc_gauche div{
+    margin-bottom: 4px;
+    display: flex;
+    padding: 8px; 
+    gap: 10px;   
+}
+.bloc_gauche .courses_schedule{
+    
+    background-color: #e3f3ff;
+    border-left: 4px solid rgb(0, 153, 255);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; 
+}
+button{
+    gap: 10px;
+    padding-top: 2px;
+    padding-left: 20px;
+    margin-top: 80px;
+    background-color:  rgb(0,2,30);
+    border: none;
+    display: flex;
+    border-radius: 25px;
+    width: 150px;
+    color: white;
+}
+button p{
+    font-size: 16px;
+    text-align: center;
+}
+button .logout{
+    padding-top: 5px;
+}
+.bloc_gauche .aidepage{
+    display: none;
+}
+nav ul a{
+    color: black;
+}
+/*************************************************/
+/******************BLOC DU MILIEU*****************/
+.bloc_milieu{
+    height: 100vh;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.bloc_milieu h3{
+    border-bottom: 2px solid  rgb(0, 153, 255);
+    padding-bottom: 10px;
+ 
+}
+.bloc_milieu p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+table{
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%;    
+}
+thead tr{
+    color:  rgb(0, 153, 255);
+}
+th, td{
+    padding: 4px 4px;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #e3f3ff; 
+}
+tbody tr:nth-child(even){
+    background-color: white;
+}
+tbody tr:first-child td:first-child{
+    border-top-left-radius: 15px;
+}
+tbody tr:first-child td:last-child{
+    border-top-right-radius: 15px;
+}
+tbody tr:last-child td:first-child{
+    border-bottom-left-radius: 15px;
+}
+tbody tr:last-child td:last-child{
+    border-bottom-right-radius: 15px;
+}
+/*************************************************/
+/******************BLOC DROIT********************/
+.bloc_droite{
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 0;
+    width: 250px;
+    background-color:white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.486);
+}
+.bloc_droite h2{
+    padding-bottom: 10px;
+}
+.aides div{
+    width: 200px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    padding: 10px;
+    font-family: 'Sen-Regular';
+    font-style: italic; 
+    box-shadow: 0px 2px 5px 2px rgba(187, 187, 187, 0.863);
+    font-size: small;
+}
+.aides div p span{
+    color:  rgb(0, 153, 255); 
+    font-weight: bold;
+}
+.aides{
+    display: grid;
+}
+/*************************************************/
+/******************MEDIA QUERY********************/
+@media(max-width:700px){
+.bloc_gauche{
+    position: absolute;
+    width: 230px;
+    margin-left: -100%;
+    transition: all 0.8s ease;
+}
+header h2{
+    position: relative;
+    left: 57%;
+}
+header p {
+ margin-left: 15px;   
+ display: flex;
+ float: left;
+ cursor: pointer;
+}
+.bloc_gauche .aidepage{
+    display: flex;
+}
+.bloc_gauche.mobilemenu{
+    margin-left: 0;
+}     
+}    
+@media(max-width:923px){
+.bloc_droite{
+    display: none;
+}  
+}
+@media(max-width:536px){
+header h2{
+    position: relative;
+    left: 50%; 
+}  
+}
+@media(max-width:470px){
+header h2{
+    position: relative;
+    left: 40%;  
+}  
+}
+@media(max-width:450px){
+
+.tablecontenu{
+    width:370px; 
+    overflow: auto;
+}
+table{
+    width: 100%;
+}
+header{
+    width: 100%;
+}
+.tablecontenu{
+    box-shadow: 0px 0px 0.6px 0px black;
+    background-color: white;
+    padding: 10px;
+}    
+}
+@media(max-width:436px){
+.tablecontenu{
+    width:360px;    
+}   
+}
+@media(max-width:426px){
+    .tablecontenu{
+        width:350px;   
+ }}
+
+@media(max-width:416px){
+.tablecontenu{
+    width:340px;   
+}   
+}
+ @media(max-width:406px){
+    .tablecontenu{
+        width:330px;   
+ }}
+ @media(max-width:396px){
+    .tablecontenu{
+        width:320px;   
+ }}
+ @media(max-width:386px){
+    .tablecontenu{
+        width:310px;   
+ }}
+ @media(max-width:376px){
+    .tablecontenu{
+        width:300px;   
+ }}
+ @media(max-width:366px){
+    .tablecontenu{
+        width:290px;   
+ }}
+ @media(max-width:356px){
+    .tablecontenu{
+        width:280px;   
+ }}
+ @media(max-width:346px){
+    .tablecontenu{
+        width:270px;   
+ }}
+ @media(max-width:336px){
+    .tablecontenu{
+        width:260px;   
+ }}
+ @media(max-width:326px){
+    .tablecontenu{
+        width:250px;   
+ }}
+ @media(max-width:316px){
+    .tablecontenu{
+        width:240px;   
+ }}
+ @media(max-width:306px){
+    .tablecontenu{
+        width:230px;   
+ }}            
+@media(max-width:400px){
+header h2{
+    position: relative;
+    left: 35%; 
+} 
+}
+@media(max-width:363px){
+header h2{
+    position: relative;
+    left: 25%; 
+}    
+}
+@media(max-width:316px){
+header h2{
+    position: relative;
+    left: 20%;  
+}
+}
+/*************************************************/
