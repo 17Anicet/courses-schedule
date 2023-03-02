@@ -30,6 +30,7 @@ header{
     top: 0px;
     transition: top 0.5s;
     width: 100%;
+    
 }
 header  h2{
     padding: 10px;
@@ -39,8 +40,64 @@ header  h2{
 header  p img{
     width: 38px;
 }
-header  p{
+header  .menu_image{
     display: none;
+}
+header .menu_sms{
+    position: absolute;
+    top: 53px;
+    left: 0;
+    padding-left: 25px;
+    height: 100vh;
+    width: 230px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.486);
+    background-color: white;
+    transition: all 0.8s ease;
+    display: none;
+    
+}
+header .menu_sms div {
+    margin-bottom: 4px;
+    display: flex;
+    padding: 8px; 
+    gap: 10px;
+}
+header .menu_sms div img{
+    width: 25px;
+    padding: 0;
+}
+header .menu_sms div a{
+    width: 250px;
+    padding: 7px;
+    color: black;
+    text-decoration: none;
+}
+header .menu_sms div:hover{
+    background-color:  #e3f3ff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; 
+}
+header .menu_sms .courses_schedule{
+    background-color: #e3f3ff;
+    border-left: 4px solid rgb(0, 153, 255);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+header .menu_elements .menu_sms button{
+    gap: 10px;
+    padding-top: 2px;
+    padding-left: 20px;
+    margin-top: 50px;
+    background-color:  rgb(0,2,30);
+    border: none;
+    display: flex;
+    border-radius: 25px;
+    width: 150px;
+    color: white;
+}
+header .menu_elements .menu_sms  .btn_logout img{
+  width: 25px;
+
 }
 /*************************************************/
 .section-centrale{
@@ -196,25 +253,31 @@ tbody tr:last-child td:last-child{
 /******************MEDIA QUERY********************/
 @media(max-width:700px){
 .bloc_gauche{
+    display: none;
+}
+header .menu_sms{
     position: absolute;
-    width: 230px;
     margin-left: -100%;
-    transition: all 0.8s ease;
+    display: initial;
 }
-header h2{
-    position: relative;
-    left: 57%;
+header {
+   justify-content: space-between;
 }
-header p {
- margin-left: 15px;   
+header .menu_image {
+ margin-top: 5px; 
+ margin-left: 15px;
  display: flex;
  float: left;
  cursor: pointer;
+ display: block;
+}
+header h2{
+    margin-right: 8px;
 }
 .bloc_gauche .aidepage{
     display: flex;
 }
-.bloc_gauche.mobilemenu{
+header .mobilemenu{
     margin-left: 0;
 }     
 }    
@@ -223,18 +286,7 @@ header p {
     display: none;
 }  
 }
-@media(max-width:536px){
-header h2{
-    position: relative;
-    left: 50%; 
-}  
-}
-@media(max-width:470px){
-header h2{
-    position: relative;
-    left: 40%;  
-}  
-}
+
 @media(max-width:450px){
 
 .tablecontenu{
@@ -312,22 +364,5 @@ header{
     .tablecontenu{
         width:230px;   
  }}            
-@media(max-width:400px){
-header h2{
-    position: relative;
-    left: 35%; 
-} 
-}
-@media(max-width:363px){
-header h2{
-    position: relative;
-    left: 25%; 
-}    
-}
-@media(max-width:316px){
-header h2{
-    position: relative;
-    left: 20%;  
-}
-}
+
 /*************************************************/

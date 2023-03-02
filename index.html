@@ -9,7 +9,48 @@
 </head>
 <body>
     <header id="header">
-        <p><img src="images/menu.png" alt="Image menu" class="menu_image"></p> 
+        <aside class="menu_elements">
+            <p><img src="images/menu.png" alt="Image menu" class="menu_image"></p>
+            <aside class="menu_sms">
+                <div>
+                    <p class="dashboard"><img src="images/dashboard.png" alt="image dashboard"> </p>
+                    <a href="#">Dashboard</a>
+                 </div>
+                 <div class="courses_schedule">
+                     <p><img src="images/schedule.png" alt="image_courseschedule"></p> 
+                     <a href="#">Courses schedule</a>
+                 </div>
+                 <div>
+                     <p><img src="images/marksheet.png" alt="image_marksheet"></p>
+                     <a href="#">Marksheet</a>
+                 </div>
+                 <div>
+                     <p><img src="images/icon_fees.png" alt="imge_schoolfees"></p>
+                     <a href="#">School fees</a>
+                 </div>
+                 <div>
+                     <p><img src="images/profile.png" alt="image_profile"></p>
+                     <a href="#">My profile</a>
+                 </div>
+                 <div>
+                     <p><img src="images/icon_library.png" alt="image_library"></p>
+                     <a href="#">Library</a>
+                 </div>
+                 <div>
+                     <p><img src="images/announcements.png" alt="image_announcement"> </p>
+                     <a href="#">Announcements</a>
+                 </div>
+                 <div class="aidepage" >
+                     <p><img src="images/aide.png" alt="image_profile"></p>
+                    <a href="aide.html">#Aide</a> 
+                 </div>
+                 <aside class="btn_logout" >
+                     
+                     <button name="logout"><p class="image"><img src="images/log_out.png" alt="image_logout"></p> <p class="logout">Logout</p> </button>
+                 </aside>
+            </aside> 
+        </aside>
+       
         <h2>SMS Zanner</h2>
     </header>
     <section class="section-centrale">
@@ -224,9 +265,11 @@
       prevScrollpos = currentScrollPos;
     }
 </script>
+</script>
 <script>
     const menusms = document.querySelector(".menu_image")
-    const blocnav = document.querySelector(".bloc_gauche")
+    const blocnav = document.querySelector(".menu_sms")
+
     menusms.addEventListener('click',()=>{
         blocnav.classList.toggle('mobilemenu')
     })
